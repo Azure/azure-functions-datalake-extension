@@ -1,10 +1,13 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using Microsoft.Azure.WebJobs.Description;
 using Microsoft.Azure.WebJobs.Host.Config;
 
 namespace Microsoft.Azure.WebJobs.Extensions.DataLake
 {
-    public class DataLakeConfig : IExtensionConfigProvider
-    {
+    public class DataLakeStoreConfig : IExtensionConfigProvider
+    {     
+
         public void Initialize(ExtensionConfigContext context)
         {
 
@@ -12,12 +15,17 @@ namespace Microsoft.Azure.WebJobs.Extensions.DataLake
 
             // Output binding for DataLakeStore
             rule.WhenIsNull(nameof(DataLakeStoreAttribute.FileName))
-                .BindToCollector(a => new DataLakeStoreOutputAsyncCollector(a));
+                .BindToCollector<DataLakeStoreOutput>(BuildCollector);
 
             // Input binding for DataLakeStore
             rule.WhenIsNotNull(nameof(DataLakeStoreAttribute.FileName))
                 .BindToInput<Stream>(typeof(DataLakeStoreStreamBuilder));
 
+        }
+
+        private IAsyncCollector<DataLakeStoreOutput> BuildCollector(DataLakeStoreAttribute attribute)
+        {
+            return new DataLakeStoreOutputAsyncCollector(attribute);
         }
     }
 }

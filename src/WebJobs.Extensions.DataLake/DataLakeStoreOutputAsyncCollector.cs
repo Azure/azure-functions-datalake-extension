@@ -11,8 +11,6 @@ namespace Microsoft.Azure.WebJobs.Extensions.DataLake
     internal class DataLakeStoreOutputAsyncCollector : IAsyncCollector<DataLakeStoreOutput>
     {
         private static AdlsClient _adlsClient;
-        private readonly Collection<DataLakeStoreOutput> _items = new Collection<DataLakeStoreOutput>();
-
         private DataLakeStoreAttribute _attribute;
 
         public DataLakeStoreOutputAsyncCollector(DataLakeStoreAttribute attr)

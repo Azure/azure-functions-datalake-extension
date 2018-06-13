@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebJobs.Extensions.DataLake
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLakeExtensionSamples", "samples\DataLakeExtensionSamples\DataLakeExtensionSamples.csproj", "{1FB453B8-5063-4347-9FB0-29B32E5F0198}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobs.Extensions.DataLake.Tests", "test\WebJobs.Extensions.DataLake.Tests\WebJobs.Extensions.DataLake.Tests.csproj", "{47671FFA-CDA5-43BD-9095-1DF5FBF550A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebJobs.Extensions.DataLake.Tests", "test\WebJobs.Extensions.DataLake.Tests\WebJobs.Extensions.DataLake.Tests.csproj", "{47671FFA-CDA5-43BD-9095-1DF5FBF550A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

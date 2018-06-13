@@ -7,7 +7,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.DataLake
 {
     /// <summary></summary>
     /// <seealso cref="Attribute" />
-    [AttributeUsage(validOn: AttributeTargets.ReturnValue | AttributeTargets.Parameter)]
+    //[AttributeUsage(validOn: AttributeTargets.ReturnValue | AttributeTargets.Parameter)]
     [Binding]
     public sealed class DataLakeStoreAttribute : Attribute
     {
@@ -17,7 +17,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.DataLake
         /// <value>
         /// The ApplicationId also Known as ClientID setting.
         /// </value>
-        [AppSetting]
+        [AutoResolve]
         public string ApplicationId { get; set; }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.DataLake
         /// <value>
         /// The Client Secret setting.
         /// </value>
-        [AppSetting]
+        [AutoResolve]
         public string ClientSecret { get; set; }
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.DataLake
         /// <value>
         /// The TenantID setting.
         /// </value>
-        [AppSetting]
+        [AutoResolve]
         public string TenantID { get; set; }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.DataLake
         /// <value>
         /// The DataLake full account FQDN setting.
         /// </value>
-        [AppSetting]
+        [AutoResolve]
         public string AccountFQDN { get; set; }
 
         /// <summary>
@@ -53,6 +53,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.DataLake
         /// <value>
         /// The full path and filename for input binding.
         /// </value>
+        [AutoResolve]
         public string FileName { get; set; }
 
     }
