@@ -15,6 +15,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLakeExtensionSamples", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebJobs.Extensions.DataLake.Tests", "test\WebJobs.Extensions.DataLake.Tests\WebJobs.Extensions.DataLake.Tests.csproj", "{47671FFA-CDA5-43BD-9095-1DF5FBF550A4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{3E9BF7E3-4BA9-40EE-A69C-F0AC55EEAC65}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
