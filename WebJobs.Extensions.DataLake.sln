@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EB7DCAB0-0CDC-43E5-A791-FB7761592A35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{5F51D4D1-C47A-43D5-8C41-58F83D4E208D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{70BE4701-0DC3-4BB6-811B-2B851687B687}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebJobs.Extensions.DataLake", "src\WebJobs.Extensions.DataLake\WebJobs.Extensions.DataLake.csproj", "{F2D4C0B7-56C1-4340-B9F4-F95001D516B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLakeExtensionSamples", "samples\DataLakeExtensionSamples\DataLakeExtensionSamples.csproj", "{1FB453B8-5063-4347-9FB0-29B32E5F0198}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebJobs.Extensions.DataLake.Tests", "test\WebJobs.Extensions.DataLake.Tests\WebJobs.Extensions.DataLake.Tests.csproj", "{47671FFA-CDA5-43BD-9095-1DF5FBF550A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{3E9BF7E3-4BA9-40EE-A69C-F0AC55EEAC65}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2D4C0B7-56C1-4340-B9F4-F95001D516B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D4C0B7-56C1-4340-B9F4-F95001D516B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D4C0B7-56C1-4340-B9F4-F95001D516B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D4C0B7-56C1-4340-B9F4-F95001D516B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FB453B8-5063-4347-9FB0-29B32E5F0198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB453B8-5063-4347-9FB0-29B32E5F0198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB453B8-5063-4347-9FB0-29B32E5F0198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB453B8-5063-4347-9FB0-29B32E5F0198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47671FFA-CDA5-43BD-9095-1DF5FBF550A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47671FFA-CDA5-43BD-9095-1DF5FBF550A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47671FFA-CDA5-43BD-9095-1DF5FBF550A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47671FFA-CDA5-43BD-9095-1DF5FBF550A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F2D4C0B7-56C1-4340-B9F4-F95001D516B9} = {EB7DCAB0-0CDC-43E5-A791-FB7761592A35}
+		{1FB453B8-5063-4347-9FB0-29B32E5F0198} = {5F51D4D1-C47A-43D5-8C41-58F83D4E208D}
+		{47671FFA-CDA5-43BD-9095-1DF5FBF550A4} = {70BE4701-0DC3-4BB6-811B-2B851687B687}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED81F304-A2E8-4CCD-8914-C69B381C0639}
+	EndGlobalSection
+EndGlobal

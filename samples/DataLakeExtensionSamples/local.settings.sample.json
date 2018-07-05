@@ -1,0 +1,12 @@
+﻿{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AzureWebJobsDashboard": "UseDevelopmentStorage=true",
+    "fqdn": "<FQDN>",
+    "tentantid": "<Tentant ID>",
+    "clientsecret": "<Client Secret>",
+    "applicationid": "<Application ID>",
+    "blobconn": "<Blob Storage Connection string for Trigger>"
+  }
+}
