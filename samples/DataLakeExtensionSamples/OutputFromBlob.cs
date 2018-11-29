@@ -1,7 +1,7 @@
-using System.IO;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.DataLake;
-using Microsoft.Azure.WebJobs.Host;
+using Microsoft.Extensions.Logging;
+using System.IO;
 
 namespace DataLakeExtensionSamples
 {
@@ -10,9 +10,9 @@ namespace DataLakeExtensionSamples
         [FunctionName("OutputFromBlob")]
         public static void Run([BlobTrigger("stuff/{name}", Connection = "blobconn")]Stream myBlob, string name,
             [DataLakeStore(AccountFQDN = "%fqdn%", ApplicationId = "%applicationid%", ClientSecret = "%clientsecret%", TenantID = "%tentantid%")]out DataLakeStoreOutput dataLakeStoreOutput,
-            TraceWriter log)
+            ILogger log)
         {
-            log.Info($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
+            log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
 
             dataLakeStoreOutput = new DataLakeStoreOutput()
             {
