@@ -1,8 +1,6 @@
 ﻿using Microsoft.Azure.WebJobs.Description;
 using Microsoft.Azure.WebJobs.Host.Config;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace WebJobs.Extensions.DataLake.Tests
 {

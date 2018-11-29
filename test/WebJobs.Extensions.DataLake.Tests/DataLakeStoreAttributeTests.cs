@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.Azure.WebJobs.Extensions.DataLake;
 using Xunit;
-using Microsoft.Azure.WebJobs.Extensions.DataLake;
 
 namespace WebJobs.Extensions.DataLake.Tests
 {
