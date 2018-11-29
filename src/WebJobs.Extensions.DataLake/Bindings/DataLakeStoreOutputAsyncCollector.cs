@@ -1,12 +1,13 @@
 ﻿using Microsoft.Azure.DataLake.Store;
 using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.DataLake;
 using Microsoft.Azure.WebJobs.Extensions.DataLake.Services;
 using System;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.WebJobs.Extensions.DataLake
+namespace Microsoft.Azure.WebJobs.Extensions.Bindings
 {
     internal class DataLakeStoreOutputAsyncCollector : IAsyncCollector<DataLakeStoreOutput>
     {
