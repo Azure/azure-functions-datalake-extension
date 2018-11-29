@@ -1,12 +1,11 @@
-﻿using System;
+﻿using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.DataLake;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.DataLake;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json.Linq;
 using Xunit;
 
 namespace WebJobs.Extensions.DataLake.Tests
@@ -21,23 +20,25 @@ namespace WebJobs.Extensions.DataLake.Tests
         public async Task DataLakeStoreTests()
         {
             //Dummy data to use later
-            JObject testData = JObject.Parse(FakeData.SamplePayload);
             var args = new Dictionary<string, object>{
                 { "fileName", testFileName  }
-            };                       
-           
-            // host to run test function
-            var host = TestHelpers.NewHost<MyProg1>();
+            };
 
             // make sure we can write the file to data lake store
-            await host.CallAsync("MyProg1.TestCollector", args);
-            Assert.Equal("success", functionOut);
-            functionOut = null;
+            using (var host = await StartHostAsync(typeof(MyProg1)))
+            {
+                await host.GetJobHost().CallAsync("MyProg1.TestCollector", args);
+                Assert.Equal("success", functionOut);
+                functionOut = null;
+            }
 
             // retrieve that same file and make sure contest are the same
-            await host.CallAsync("MyProg1.TestInputBinding", args);
-            Assert.Equal(FakeData.SamplePayload, functionOut);
-            functionOut = null;
+            using (var host = await StartHostAsync(typeof(MyProg1)))
+            {
+                await host.GetJobHost().CallAsync("MyProg1.TestInputBinding", args);
+                Assert.Equal(FakeData.SamplePayload, functionOut);
+                functionOut = null;
+            }
 
         }
                 
@@ -77,6 +78,26 @@ namespace WebJobs.Extensions.DataLake.Tests
                 }
             }
 
+        }
+
+        public async Task<IHost> StartHostAsync(Type testType)
+        {
+            ExplicitTypeLocator locator = new ExplicitTypeLocator(testType);
+
+            IHost host = new HostBuilder()
+                .ConfigureWebJobs(builder =>
+                {
+                    builder.AddAzureStorage()
+                    .AddDataLakeStore();
+                })
+                .ConfigureServices(services =>
+                {
+                    services.AddSingleton<ITypeLocator>(locator);
+                })
+                .Build();
+
+            await host.StartAsync();
+            return host;
         }
 
     }
