@@ -1,6 +1,6 @@
-# Azure Data Lake Store Binding for Azure Functions
+# Azure Data Lake Storage Gen1 Binding for Azure Functions
 
-The following binding can be used with Azure Functions v2 C# Class Library. 
+The following binding can be used with Azure Functions v2 C# Class Library to connect to Azure Data Lake Storage Gen1. 
 
 ## Instructions
 
@@ -36,7 +36,7 @@ View a [sample function](samples/DataLakeExtensionSamples/InputSample.cs) using 
 
 ## Binding Requirements 
 
-1. [Azure Data Lake Store](https://azure.microsoft.com/en-us/services/data-lake-store/)
+1. [Azure Data Lake Store Gen1](https://azure.microsoft.com/en-us/services/data-lake-store/)
 2. Setup [Service to Service Auth](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-service-to-service-authenticate-using-active-directory) using Azure AD
 3. [Azure Functions and Webjobs tools](https://marketplace.visualstudio.com/items?itemName=VisualStudioWebandAzureTools.AzureFunctionsandWebJobsTools) extension 
 4. Add the application settings noted below. 
