@@ -5,9 +5,6 @@
     <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DataLake</AssemblyName>
     <RootNamespace>Microsoft.Azure.WebJobs.Extensions.DataLake</RootNamespace>
     <Company>Microsoft Corporation</Company>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <RepositoryUrl>https://github.com/martins-vds/azure-functions-datalake-extension</RepositoryUrl>
-    <Description>[UNOFFICIAL] Azure Data Lake Storage Gen1 Binding for Azure Functions</Description>
   </PropertyGroup>
 
   <ItemGroup>
