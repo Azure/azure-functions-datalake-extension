@@ -1,6 +1,6 @@
 # Azure Data Lake Storage Gen1 Binding for Azure Functions
 
-The following binding can be used with Azure Functions v2 C# Class Library to connect to Azure Data Lake Storage Gen1. 
+The following binding can be used with Azure Functions v3 C# Class Library to connect to Azure Data Lake Storage Gen1. 
 
 ## Instructions
 
