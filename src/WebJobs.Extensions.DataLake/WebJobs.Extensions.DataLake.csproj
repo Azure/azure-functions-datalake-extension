@@ -5,12 +5,15 @@
     <AssemblyName>Microsoft.Azure.WebJobs.Extensions.DataLake</AssemblyName>
     <RootNamespace>Microsoft.Azure.WebJobs.Extensions.DataLake</RootNamespace>
     <Company>Microsoft Corporation</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/martins-vds/azure-functions-datalake-extension</RepositoryUrl>
+    <Description>[UNOFFICIAL] Azure Data Lake Storage Gen1 Binding for Azure Functions</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.DataLake.Store" Version="1.1.18" />
-    <PackageReference Include="Microsoft.Rest.ClientRuntime.Azure.Authentication" Version="2.4.0" />
-    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.13" />
+    <PackageReference Include="Microsoft.Azure.DataLake.Store" Version="1.1.21" />
+    <PackageReference Include="Microsoft.Rest.ClientRuntime.Azure.Authentication" Version="2.4.1" />
+    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.22" />
   </ItemGroup>
 
 </Project>
